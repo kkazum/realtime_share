@@ -8,15 +8,9 @@ class RoomsController < ApplicationController
   end
 
   def create
-    @room = Room.new(room_params)
+    @room = Room.new
     if @room.save
       redirect_to room_url(token: @room.token)
     end
-  end
-
-  private
-
-  def room_params
-    params.require(:room).permit(:token)
   end
 end
