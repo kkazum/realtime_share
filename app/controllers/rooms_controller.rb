@@ -4,13 +4,13 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @room = Room.find(params[:id])
+    @room = Room.find_by(token: params[:token])
   end
 
   def create
     @room = Room.new(room_params)
     if @room.save
-      redirect_to @room
+      redirect_to room_url(token: @room.token)
     end
   end
 
