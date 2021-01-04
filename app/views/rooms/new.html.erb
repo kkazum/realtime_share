@@ -1,2 +1,7 @@
-<h1>Rooms#new</h1>
-<p>Find me in app/views/rooms/new.html.erb</p>
+<%= form_with model: @room, local: true do |f| %>
+
+<%= f.label :token %>
+<%= f.text_area :token, placeholder: "Type anything..." %>
+
+<%= f.submit "Create New Room" %>
+<% end %>
