@@ -1,5 +1,37 @@
-<%= @room.token %>
-<form>
-  <label>Say something:</label><br>
-  <input type="text">
-</form>
+<div class="wrapper">
+  <div class="left-content">
+    <form class="create-message-button">
+      <textarea type="text" class="input-message-area"></textarea>
+    </form>
+  </div>
+  <div class="right-content">
+    <!-- ▼LINE風ここから -->
+    <div class="line__container">
+      <!-- タイトル -->
+      <div class="line__title">
+        Share Area
+      </div>
+
+      <!-- ▼会話エリア scrollを外すと高さ固定解除 -->
+      <div class="line__contents scroll">
+
+        <!-- 相手の吹き出し -->
+        <div class="line__left">
+          <div class="line__left-text">
+            <div class="name">neko</div>
+            <div class="text">nekonekonekonekonekonekonekoneko</div>
+          </div>
+        </div>
+
+        <!-- 自分の吹き出し -->
+        <div class="line__right">
+          <div class="text">dogdogdogdogdogdogdogdogdogdogdogdogdogdogdog</div>
+          <span class="date">既読<br>0:30</span>
+        </div>
+
+      </div>
+      <!--　▲会話エリア ここまで -->
+    </div>
+    <!--　▲LINE風ここまで -->
+  </div>
+</div>

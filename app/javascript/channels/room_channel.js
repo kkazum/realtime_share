@@ -18,7 +18,10 @@ if (location.pathname.split('/')[2].length > 3) {
 
       received(data) {
         // Called when there's incoming data on the websocket for this channel
-        return alert(data);
+        const html = `<p>${data}</p>`;
+        return document
+          .querySelector('.messages')
+          .insertAdjacentHTML('afterbegin', html);
       },
 
       speak: function (message) {
