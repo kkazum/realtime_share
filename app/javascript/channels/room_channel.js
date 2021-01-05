@@ -6,6 +6,10 @@ if (location.pathname.split('/')[2].length > 3) {
     {
       connected() {
         // Called when the subscription is ready for use on the server
+        const user_name =
+          localStorage.getItem('user_name') ||
+          window.prompt('ユーザー名を入力してください', '');
+        localStorage.setItem('user_name', user_name);
       },
 
       disconnected() {
@@ -14,13 +18,14 @@ if (location.pathname.split('/')[2].length > 3) {
 
       received(data) {
         // Called when there's incoming data on the websocket for this channel
-        console.log(data);
         return alert(data);
       },
 
       speak: function (message) {
-        console.log(message);
-        return this.perform('speak', { message: message });
+        const user_name = localStorage.getItem('user_name');
+        return this.perform('speak', {
+          message: `${user_name}: ${message}`,
+        });
       },
     }
   );
