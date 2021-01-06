@@ -11,6 +11,6 @@ class RoomChannel < ApplicationCable::Channel
 
   def speak(data)
     room = Room.find_by(token: params[:token])
-    RoomChannel.broadcast_to(room, data['message'])
+    RoomChannel.broadcast_to(room, data)
   end
 end

@@ -18,6 +18,7 @@ $myTextColor: #8de055; // 吹き出しの色
   font-size: 80%;
   height: 100%;
   width: 100%;
+  overflow: scroll;
 
   /* タイトル部分 */
   .line__title {
@@ -35,14 +36,7 @@ $myTextColor: #8de055; // 吹き出しの色
   /* 会話部分 */
   .line__contents {
     padding: 10px;
-    overflow: hidden;
     line-height: 135%;
-
-    &.scroll {
-      height: 500px;
-      overflow-y: scroll;
-    }
-
     /* 相手の会話 */
     .line__left {
       width: 100%;
