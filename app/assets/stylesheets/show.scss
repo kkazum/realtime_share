@@ -11,17 +11,24 @@
     height: 100%;
     width: 50%;
     form {
-      height: 100%;
+      height: 50%;
       width: 100%;
       textarea {
         height: 100%;
         width: 100%;
         outline: none;
-        padding: 0;
         box-sizing: border-box;
         padding: 10px;
         background-color: #f7f7f7;
       }
+    }
+    .preview {
+      height: 50%;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: #f7f7f7;
+      word-break: break-all;
     }
   }
   .right-content {

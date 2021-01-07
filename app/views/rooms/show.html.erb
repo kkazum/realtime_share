@@ -1,35 +1,4 @@
 <div class="wrapper">
-  <div class="left-content">
-    <form class="create-message-button">
-      <textarea type="text" placeholder="共有したいメッセージを入力" class="input-message-area"></textarea>
-    </form>
-  </div>
-  <div class="right-content">
-    <!-- ▼LINE風ここから -->
-    <div class="line__container">
-      <!-- タイトル -->
-      <div class="line__title">
-        Share Area
-      </div>
-      <div class="line__contents">
-
-        <!-- 相手の吹き出し -->
-        <div class="line__left">
-          <div class="line__left-text">
-            <div class="name">neko</div>
-            <div class="text">nekonekonekonekonekonekonekoneko</div>
-          </div>
-        </div>
-
-        <!-- 自分の吹き出し -->
-        <div class="line__right">
-          <div class="text">dogdogdogdogdogdogdogdogdogdogdogdogdogdogdog</div>
-          <span class="date">既読<br>0:30</span>
-        </div>
-
-      </div>
-      <!--　▲会話エリア ここまで -->
-    </div>
-    <!--　▲LINE風ここまで -->
-  </div>
+  <%= react_component('Editor')%>
+  <%= react_component('Line')%>
 </div>
